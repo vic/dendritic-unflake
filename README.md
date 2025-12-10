@@ -9,13 +9,13 @@
 
 # Dendritic unflake
 
-This repository serves as an example Dendritic Nix setup implemented **without** flakes nor flake-parts.
+This repository serves as an example Dendritic Nix implementation **without** flakes nor flake-parts.
 
 
-Entry point is [default.nix](default.nix) and has an [example](modules/example.nix) Dendritic nixosConfiguration.
+Entry point is [default.nix](default.nix), [modules/example.nix](modules/example.nix) defines a nixosConfiguration.
 
 
-This example uses [unflake](https://discourse.nixos.org/t/unflake-flake-dependencies-for-non-flake-projects-and-a-way-to-stop-writing-follows/72611) to fetch dependencies.
+This example uses [unflake](https://discourse.nixos.org/t/unflake-flake-dependencies-for-non-flake-projects-and-a-way-to-stop-writing-follows/72611) to fetch dependencies and provide flake-like inputs.
 
 
 ## Usage
@@ -29,11 +29,11 @@ nix-shell https://ln-s.sh/unflake -A unflake-shell --run unflake
 Build `my-laptop` nixos config:
 
 ```console
-nixos-rebuild build --file . --attr nixosConfigurations.my-laptop
+nixos-rebuild build -f . -A nixosConfigurations.my-laptop
 ```
 
 alternatively:
 
 ```console
-nix-build . --attr nixosConfigurations.my-laptop.config.system.build.toplevel
+nix-build -A nixosConfigurations.my-laptop.config.system.build.toplevel
 ```
