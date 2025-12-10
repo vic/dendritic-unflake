@@ -1,16 +1,9 @@
 { lib, self, ... }:
 {
-
   modules.nixos.no-boot = {
     boot.loader.grub.enable = false;
     fileSystems."/".device = "/dev/no-device";
   };
-
-  modules.nixos.installer =
-    { modulesPath, ... }:
-    {
-      imports = [ (modulesPath + "/installer/cd-dvd/installation-cd-minimal.nix") ];
-    };
 
   modules.nixos.statics = {
     system.stateVersion = "25.11";
@@ -18,11 +11,12 @@
     passthru = { };
   };
 
+  modules.nixos.my-laptop.imports = with self.modules.nixos; [
+    statics
+    no-boot
+  ];
+
   nixosConfigurations.my-laptop = lib.nixosSystem {
-    modules = with self.modules.nixos; [
-      statics
-      no-boot
-      # installer
-    ];
+    modules = [ self.modules.nixos.my-laptop ];
   };
 }

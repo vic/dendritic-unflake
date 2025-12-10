@@ -3,6 +3,6 @@
   options.nixosConfigurations = lib.mkOption {
     description = "NixOS configurations";
     default = { };
-    type = lib.types.attrsOf lib.types.anything;
+    type = lib.types.lazyAttrsOf lib.types.raw;
   };
 }
