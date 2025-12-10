@@ -29,11 +29,11 @@ nix-shell https://ln-s.sh/unflake -A unflake-shell --run unflake
 Build `my-laptop` nixos config:
 
 ```console
-nixos-rebuild build -f . -A nixosConfigurations.my-laptop
+nixos-rebuild build --file . --attr nixosConfigurations.my-laptop
 ```
 
 alternatively:
 
 ```console
-nix-build -A nixosConfigurations.my-laptop.config.system.build.toplevel
+nix-build --attr nixosConfigurations.my-laptop.config.system.build.toplevel
 ```
