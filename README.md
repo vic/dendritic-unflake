@@ -9,8 +9,8 @@
 
 This repo contains several non-flakes examples (one per branch):
 
-- [unflake](tree/main) **current**
-- [npins](tree/npins)
+- [unflake](https://github.com/vic/dendritic-unflake/tree/main) **current**
+- [npins](https://github.com/vic/dendritic-unflake/tree/npins)
 
 
 # Dendritic unflake
