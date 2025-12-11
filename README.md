@@ -7,25 +7,23 @@
   <img src="https://github.com/vic/dendritic-unflake/actions/workflows/test.yaml/badge.svg" alt="CI Status"/> </a>
 </p>
 
-# Dendritic unflake
+This repo contains several non-flakes examples (one per branch):
+
+- [unflake](tree/main)
+- [npins](tree/npins) **current**
+
+# Dendritic npins
 
 This repository serves as an example Dendritic Nix implementation **without** flakes nor flake-parts.
 ([discourse post](https://discourse.nixos.org/t/dendritic-unflake-example-dendritic-setup-without-flakes-nor-flake-parts/73069/5) and [context](https://github.com/mightyiam/dendritic/pull/15))
 
-
 Entry point is [default.nix](default.nix), [modules/example.nix](modules/example.nix) defines a nixosConfiguration.
 
 
-This example uses [unflake](https://discourse.nixos.org/t/unflake-flake-dependencies-for-non-flake-projects-and-a-way-to-stop-writing-follows/72611) to fetch dependencies and provide flake-like inputs.
+This example uses [npins](https://github.com/andir/npins) to fetch dependencies and [with-inputs.nix](with-inputs.nix) to provide flake-like inputs.
 
 
 ## Usage
-
-Regenerate [unflake.nix](unflake.nix) whenever [inputs.nix](inputs.nix) change:
-
-```console
-nix-shell https://ln-s.sh/unflake -A unflake-shell --run unflake
-```
 
 Build `my-laptop` nixos config:
 

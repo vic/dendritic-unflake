@@ -17,4 +17,4 @@ let
     }).config;
 
 in
-(import ./unflake.nix).withInputs outputs
+import ./with-inputs.nix outputs
