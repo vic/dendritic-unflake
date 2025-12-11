@@ -10,9 +10,11 @@
 This repo contains several non-flakes examples (one per branch):
 
 - [unflake](https://github.com/vic/dendritic-unflake/tree/main)
-- [npins](https://github.com/vic/dendritic-unflake/tree/npins) **current**
+- [npins](https://github.com/vic/dendritic-unflake/tree/npins)
+- [builtins](https://github.com/vic/dendritic-unflake/tree/builtins) **current**
 
-# Dendritic npins
+
+# Dendritic impure-nix
 
 This repository serves as an example Dendritic Nix implementation **without** flakes nor flake-parts.
 ([discourse post](https://discourse.nixos.org/t/dendritic-unflake-example-dendritic-setup-without-flakes-nor-flake-parts/73069/5) and [context](https://github.com/mightyiam/dendritic/pull/15))
@@ -20,7 +22,7 @@ This repository serves as an example Dendritic Nix implementation **without** fl
 Entry point is [default.nix](default.nix), [modules/example.nix](modules/example.nix) defines a nixosConfiguration.
 
 
-This example uses [npins](https://github.com/andir/npins) to fetch dependencies and [with-inputs.nix](with-inputs.nix) to provide flake-like inputs.
+This example uses `builtins.fetchGit` to fetch dependencies and [with-inputs.nix](with-inputs.nix) to provide flake-like inputs.
 
 
 ## Usage
