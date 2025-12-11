@@ -1,5 +1,18 @@
 {
   "pins": {
+    "froyo": {
+      "type": "Git",
+      "repository": {
+        "type": "GitHub",
+        "owner": "getchoo",
+        "repo": "froyo"
+      },
+      "branch": "main",
+      "submodules": false,
+      "revision": "b753aa675b197019637e26bcaf5250aad6613ab6",
+      "url": "https://github.com/getchoo/froyo/archive/b753aa675b197019637e26bcaf5250aad6613ab6.tar.gz",
+      "hash": "0y1x4zg480vi250yxi0jr27p0qhaabxc8g24g46fa6hrbl4lq7aq"
+    },
     "import-tree": {
       "type": "Git",
       "repository": {

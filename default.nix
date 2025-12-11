@@ -1,20 +1,7 @@
 let
-
-  modules =
-    { inputs, ... }:
-    {
-      imports = [ (inputs.import-tree ./modules) ];
-    };
-
-  outputs =
-    inputs:
-    (inputs.nixpkgs.lib.evalModules {
-      modules = [ modules ];
-      specialArgs = {
-        inherit inputs;
-        inherit (inputs) self;
-      };
-    }).config;
-
+  inputs = import ./npins;
 in
-import ./with-inputs.nix outputs
+import inputs.froyo { inherit inputs; } {
+  inherit inputs;
+  imports = [ (import inputs.import-tree ./modules) ];
+}

@@ -10,8 +10,9 @@
 This repo contains several non-flakes examples (one per branch):
 
 - [unflake](https://github.com/vic/dendritic-unflake/tree/main)
-- [npins](https://github.com/vic/dendritic-unflake/tree/npins) **current**
+- [npins](https://github.com/vic/dendritic-unflake/tree/npins)
 - [builtins](https://github.com/vic/dendritic-unflake/tree/builtins)
+- [froyo](https://github.com/vic/dendritic-unflake/tree/froyo) **current**
 
 # Dendritic npins
 
@@ -21,7 +22,7 @@ This repository serves as an example Dendritic Nix implementation **without** fl
 Entry point is [default.nix](default.nix), [modules/example.nix](modules/example.nix) defines a nixosConfiguration.
 
 
-This example uses [npins](https://github.com/andir/npins) to fetch dependencies and [with-inputs.nix](with-inputs.nix) to provide flake-like inputs.
+This example uses [froyo](https://github.com/getchoo/froyo) top-level modules.
 
 
 ## Usage
@@ -29,11 +30,11 @@ This example uses [npins](https://github.com/andir/npins) to fetch dependencies 
 Build `my-laptop` nixos config:
 
 ```console
-nixos-rebuild build --file . --attr nixosConfigurations.my-laptop
+nixos-rebuild build --file . --attr outputs.nixosConfigurations.my-laptop
 ```
 
 alternatively:
 
 ```console
-nix-build --attr nixosConfigurations.my-laptop.config.system.build.toplevel
+nix-build --attr outputs.nixosConfigurations.my-laptop.config.system.build.toplevel
 ```
