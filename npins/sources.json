@@ -1,5 +1,18 @@
 {
   "pins": {
+    "flake-parts": {
+      "type": "Git",
+      "repository": {
+        "type": "GitHub",
+        "owner": "hercules-ci",
+        "repo": "flake-parts"
+      },
+      "branch": "main",
+      "submodules": false,
+      "revision": "5635c32d666a59ec9a55cab87e898889869f7b71",
+      "url": "https://github.com/hercules-ci/flake-parts/archive/5635c32d666a59ec9a55cab87e898889869f7b71.tar.gz",
+      "hash": "0lqy0mm4rap9c4zmbars93pv31lqa42c77hq5whfmvizdb13n41j"
+    },
     "import-tree": {
       "type": "Git",
       "repository": {
@@ -14,6 +27,12 @@
       "hash": "0p9wqkk9280ay18b3cpzwbyaq9gwvglb22yki0q03p4vb1n0mxk6"
     },
     "nixpkgs": {
+      "type": "Channel",
+      "name": "nixpkgs-unstable",
+      "url": "https://releases.nixos.org/nixpkgs/nixpkgs-26.05pre909321.677fbe97984e/nixexprs.tar.xz",
+      "hash": "0i4jyr0xv8i90gxil1s36yqas4qfnp52bwr02fdx90chp31kchzv"
+    },
+    "nixpkgs-lib": {
       "type": "Channel",
       "name": "nixpkgs-unstable",
       "url": "https://releases.nixos.org/nixpkgs/nixpkgs-26.05pre909321.677fbe97984e/nixexprs.tar.xz",
