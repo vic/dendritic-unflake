@@ -10,9 +10,9 @@
       },
       "branch": "main",
       "submodules": false,
-      "revision": "ca5192c8fb87cd8e2a243728aac89f3acfebe2f4",
-      "url": "https://codeberg.org/FrdrCkII/falake/archive/ca5192c8fb87cd8e2a243728aac89f3acfebe2f4.tar.gz",
-      "hash": "0459agy0h5yp6dy7hxd18akw68r361yy8gqni58ic1v3kzw79hkh"
+      "revision": "70761ee62e87537ad428903186146a8a773b7701",
+      "url": "https://codeberg.org/FrdrCkII/falake/archive/70761ee62e87537ad428903186146a8a773b7701.tar.gz",
+      "hash": "0yp7arsr15zvjhj63awmcx5n677kdxllmrwrx606rx505p99xzwa"
     },
     "import-tree": {
       "type": "Git",
