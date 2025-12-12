@@ -1,22 +1,22 @@
-{ lib, self, ... }:
+{ pins, config, ... }:
 {
-  modules.nixos.no-boot = {
+  flake.modules.nixos.no-boot = {
     boot.loader.grub.enable = false;
     fileSystems."/".device = "/dev/no-device";
   };
 
-  modules.nixos.statics = {
+  flake.modules.nixos.statics = {
     system.stateVersion = "25.11";
     nixpkgs.hostPlatform = "x86_64-linux";
     passthru = { };
   };
 
-  modules.nixos.my-laptop.imports = with self.modules.nixos; [
+  flake.modules.nixos.my-laptop.imports = with config.flake.modules.nixos; [
     statics
     no-boot
   ];
 
-  nixosConfigurations.my-laptop = lib.nixosSystem {
-    modules = [ self.modules.nixos.my-laptop ];
+  flake.nixosConfigurations.my-laptop = import "${pins.nixpkgs}/nixos/lib/eval-config.nix" {
+    modules = [ config.flake.modules.nixos.my-laptop ];
   };
 }
