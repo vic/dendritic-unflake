@@ -14,7 +14,7 @@ This repo contains several non-flakes examples (one per branch):
 - [builtins](https://github.com/vic/dendritic-unflake/tree/builtins)
 - [froyo](https://github.com/vic/dendritic-unflake/tree/froyo) **current**
 
-# Dendritic npins
+# Dendritic froyo
 
 This repository serves as an example Dendritic Nix implementation **without** flakes nor flake-parts.
 ([discourse post](https://discourse.nixos.org/t/dendritic-unflake-example-dendritic-setup-without-flakes-nor-flake-parts/73069/5) and [context](https://github.com/mightyiam/dendritic/pull/15))
