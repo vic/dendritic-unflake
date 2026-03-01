@@ -1,0 +1,15 @@
+name: test
+on:
+  push:
+    branches: ["main"]
+  pull_request:
+jobs:
+  test:
+    name: Test
+    runs-on: ubuntu-latest
+    steps:
+      - uses: wimpysworld/nothing-but-nix@main
+      - uses: cachix/install-nix-action@v31
+      - uses: DeterminateSystems/magic-nix-cache-action@main
+      - uses: actions/checkout@v5
+      - run: nix-build . --attr nixosConfigurations.my-laptop.config.system.build.toplevel

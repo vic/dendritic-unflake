@@ -1,0 +1,37 @@
+{
+  "pins": {
+    "froyo": {
+      "type": "Git",
+      "repository": {
+        "type": "GitHub",
+        "owner": "getchoo",
+        "repo": "froyo"
+      },
+      "branch": "main",
+      "submodules": false,
+      "revision": "b753aa675b197019637e26bcaf5250aad6613ab6",
+      "url": "https://github.com/getchoo/froyo/archive/b753aa675b197019637e26bcaf5250aad6613ab6.tar.gz",
+      "hash": "0y1x4zg480vi250yxi0jr27p0qhaabxc8g24g46fa6hrbl4lq7aq"
+    },
+    "import-tree": {
+      "type": "Git",
+      "repository": {
+        "type": "GitHub",
+        "owner": "vic",
+        "repo": "import-tree"
+      },
+      "branch": "main",
+      "submodules": false,
+      "revision": "3c23749d8013ec6daa1d7255057590e9ca726646",
+      "url": "https://github.com/vic/import-tree/archive/3c23749d8013ec6daa1d7255057590e9ca726646.tar.gz",
+      "hash": "0p9wqkk9280ay18b3cpzwbyaq9gwvglb22yki0q03p4vb1n0mxk6"
+    },
+    "nixpkgs": {
+      "type": "Channel",
+      "name": "nixpkgs-unstable",
+      "url": "https://releases.nixos.org/nixpkgs/nixpkgs-26.05pre909321.677fbe97984e/nixexprs.tar.xz",
+      "hash": "0i4jyr0xv8i90gxil1s36yqas4qfnp52bwr02fdx90chp31kchzv"
+    }
+  },
+  "version": 5
+}
